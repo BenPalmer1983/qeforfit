@@ -1,0 +1,144 @@
+File Name:                      config_0001
+Path:                           wd/configs/1
+File In:                        wd/configs/1/config_0001.in
+File Out:                       wd/configs/1/config_0001.out
+Hash:                           01f4b41d4dada33e9a1b8f08834229f7de36d7bdd5098fce7a35003b4978159702bf9a31ef6640aa9de4052ee92dc93bb33ab34a67f66d2e6f47792fce8ff9dd
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/01f4b41d4dada33e9a1b8f08834229f7de36d7bdd5098fce7a35003b4978159702bf9a31ef6640aa9de4052ee92dc93bb33ab34a67f66d2e6f47792fce8ff9dd.in
+Cache Out:                      /opt/pwscf_cache/01f4b41d4dada33e9a1b8f08834229f7de36d7bdd5098fce7a35003b4978159702bf9a31ef6640aa9de4052ee92dc93bb33ab34a67f66d2e6f47792fce8ff9dd.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/1/config_0001.in > wd/configs/1/config_0001.out
+
+
+File Name:                      config_0002
+Path:                           wd/configs/1
+File In:                        wd/configs/1/config_0002.in
+File Out:                       wd/configs/1/config_0002.out
+Hash:                           9626714d327957a66dcc3504b952840cda09785c8ee129db30b7f03638589012a4f194a2aad702aaea2e63dbc00646beb3911dab90059489b55c1f49f5e8a7ce
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/9626714d327957a66dcc3504b952840cda09785c8ee129db30b7f03638589012a4f194a2aad702aaea2e63dbc00646beb3911dab90059489b55c1f49f5e8a7ce.in
+Cache Out:                      /opt/pwscf_cache/9626714d327957a66dcc3504b952840cda09785c8ee129db30b7f03638589012a4f194a2aad702aaea2e63dbc00646beb3911dab90059489b55c1f49f5e8a7ce.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/1/config_0002.in > wd/configs/1/config_0002.out
+
+
+File Name:                      config_0003
+Path:                           wd/configs/1
+File In:                        wd/configs/1/config_0003.in
+File Out:                       wd/configs/1/config_0003.out
+Hash:                           2f515fdad7455f2b8041cab0fbcde39558798a1e62feb4bf2d6a8df617b1cb97476b91a25d903961db27938bb94708f4d4dbc2e1aab80ee6a6ebe1d61927c32b
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/2f515fdad7455f2b8041cab0fbcde39558798a1e62feb4bf2d6a8df617b1cb97476b91a25d903961db27938bb94708f4d4dbc2e1aab80ee6a6ebe1d61927c32b.in
+Cache Out:                      /opt/pwscf_cache/2f515fdad7455f2b8041cab0fbcde39558798a1e62feb4bf2d6a8df617b1cb97476b91a25d903961db27938bb94708f4d4dbc2e1aab80ee6a6ebe1d61927c32b.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/1/config_0003.in > wd/configs/1/config_0003.out
+
+
+File Name:                      config_0004
+Path:                           wd/configs/1
+File In:                        wd/configs/1/config_0004.in
+File Out:                       wd/configs/1/config_0004.out
+Hash:                           ee4b17b646fa819e7484925af05bada4f3da513f8fb53504257a85eedd4d97ca81c55822e0325fc0037c03bb35b6b882d891a5cea5440d025b17a99b733252e9
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/ee4b17b646fa819e7484925af05bada4f3da513f8fb53504257a85eedd4d97ca81c55822e0325fc0037c03bb35b6b882d891a5cea5440d025b17a99b733252e9.in
+Cache Out:                      /opt/pwscf_cache/ee4b17b646fa819e7484925af05bada4f3da513f8fb53504257a85eedd4d97ca81c55822e0325fc0037c03bb35b6b882d891a5cea5440d025b17a99b733252e9.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/1/config_0004.in > wd/configs/1/config_0004.out
+
+
+File Name:                      config_0005
+Path:                           wd/configs/1
+File In:                        wd/configs/1/config_0005.in
+File Out:                       wd/configs/1/config_0005.out
+Hash:                           0d4124fb5ce70efd5368676354cf9965432b35f01d7b7dcd353f4990b7cda765ae03f2e49332dc92531dbb8bbca891682a91d633863a008bdf704f1038955e67
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/0d4124fb5ce70efd5368676354cf9965432b35f01d7b7dcd353f4990b7cda765ae03f2e49332dc92531dbb8bbca891682a91d633863a008bdf704f1038955e67.in
+Cache Out:                      /opt/pwscf_cache/0d4124fb5ce70efd5368676354cf9965432b35f01d7b7dcd353f4990b7cda765ae03f2e49332dc92531dbb8bbca891682a91d633863a008bdf704f1038955e67.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/1/config_0005.in > wd/configs/1/config_0005.out
+
+
+File Name:                      config_0001
+Path:                           wd/configs/2
+File In:                        wd/configs/2/config_0001.in
+File Out:                       wd/configs/2/config_0001.out
+Hash:                           c155af918a3d57e101f0f297bca764c8a3aceb3fab170e6c1171e0b56cf073e767aa4e422ae840721eb6257c684e5a81ecd5e5eda65ed4d5427b0af97ef4463f
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/c155af918a3d57e101f0f297bca764c8a3aceb3fab170e6c1171e0b56cf073e767aa4e422ae840721eb6257c684e5a81ecd5e5eda65ed4d5427b0af97ef4463f.in
+Cache Out:                      /opt/pwscf_cache/c155af918a3d57e101f0f297bca764c8a3aceb3fab170e6c1171e0b56cf073e767aa4e422ae840721eb6257c684e5a81ecd5e5eda65ed4d5427b0af97ef4463f.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/2/config_0001.in > wd/configs/2/config_0001.out
+
+
+File Name:                      config_0002
+Path:                           wd/configs/2
+File In:                        wd/configs/2/config_0002.in
+File Out:                       wd/configs/2/config_0002.out
+Hash:                           14f6845ed0909c822d69cbb877ab5f0abb45204cb761e772ec68a47ed0c749a613a21a79fdbfe889b71203b3d5d6cda21d8c9a3244108628f32553be6ea22500
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/14f6845ed0909c822d69cbb877ab5f0abb45204cb761e772ec68a47ed0c749a613a21a79fdbfe889b71203b3d5d6cda21d8c9a3244108628f32553be6ea22500.in
+Cache Out:                      /opt/pwscf_cache/14f6845ed0909c822d69cbb877ab5f0abb45204cb761e772ec68a47ed0c749a613a21a79fdbfe889b71203b3d5d6cda21d8c9a3244108628f32553be6ea22500.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/2/config_0002.in > wd/configs/2/config_0002.out
+
+
+File Name:                      config_0003
+Path:                           wd/configs/2
+File In:                        wd/configs/2/config_0003.in
+File Out:                       wd/configs/2/config_0003.out
+Hash:                           b79f016f9dcdece36bd5544c5765391e3da1f6f86a85076e250345231fef364c0fb376c8e604956513f0091dc62158a77b55cd29c787d6020c4c9cb519cf266a
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/b79f016f9dcdece36bd5544c5765391e3da1f6f86a85076e250345231fef364c0fb376c8e604956513f0091dc62158a77b55cd29c787d6020c4c9cb519cf266a.in
+Cache Out:                      /opt/pwscf_cache/b79f016f9dcdece36bd5544c5765391e3da1f6f86a85076e250345231fef364c0fb376c8e604956513f0091dc62158a77b55cd29c787d6020c4c9cb519cf266a.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/2/config_0003.in > wd/configs/2/config_0003.out
+
+
+File Name:                      config_0004
+Path:                           wd/configs/2
+File In:                        wd/configs/2/config_0004.in
+File Out:                       wd/configs/2/config_0004.out
+Hash:                           ced969d7b5daed443b4fb3465d3a2bdf597486d43665132a4560ddaccc5e4bfeed7cf22c0e7c7f8a4b7703d95d3ddf062aa68b71bb5280d4d848258c7c184f74
+Use Cache?:                     False
+Cache Used:                     False
+Cache In:                       /opt/pwscf_cache/ced969d7b5daed443b4fb3465d3a2bdf597486d43665132a4560ddaccc5e4bfeed7cf22c0e7c7f8a4b7703d95d3ddf062aa68b71bb5280d4d848258c7c184f74.in
+Cache Out:                      /opt/pwscf_cache/ced969d7b5daed443b4fb3465d3a2bdf597486d43665132a4560ddaccc5e4bfeed7cf22c0e7c7f8a4b7703d95d3ddf062aa68b71bb5280d4d848258c7c184f74.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/2/config_0004.in > wd/configs/2/config_0004.out
+
+
+File Name:                      config_0005
+Path:                           wd/configs/2
+File In:                        wd/configs/2/config_0005.in
+File Out:                       wd/configs/2/config_0005.out
+Hash:                           f5ec69ef80380c9b768ea737e2fda51dc2fd42e93205a32a8b65d125dcd44058a63bc1f0ef0622700d2b5dbc2d6cd133110fb9024ad146a117ea08461094fbed
+Use Cache?:                     False
+Cache Used:                     False
+Cache In:                       /opt/pwscf_cache/f5ec69ef80380c9b768ea737e2fda51dc2fd42e93205a32a8b65d125dcd44058a63bc1f0ef0622700d2b5dbc2d6cd133110fb9024ad146a117ea08461094fbed.in
+Cache Out:                      /opt/pwscf_cache/f5ec69ef80380c9b768ea737e2fda51dc2fd42e93205a32a8b65d125dcd44058a63bc1f0ef0622700d2b5dbc2d6cd133110fb9024ad146a117ea08461094fbed.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/2/config_0005.in > wd/configs/2/config_0005.out
+
+
+File Name:                      config_0001
+Path:                           wd/configs/3
+File In:                        wd/configs/3/config_0001.in
+File Out:                       wd/configs/3/config_0001.out
+Hash:                           3339fc03fa4009075c9fd3f12249da3387dd9bacab96a66b4392df4bfad8c050d81e2e6455434c56459c3735e35092de06181fb6b7fabc37c3b62722ede235d1
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/3339fc03fa4009075c9fd3f12249da3387dd9bacab96a66b4392df4bfad8c050d81e2e6455434c56459c3735e35092de06181fb6b7fabc37c3b62722ede235d1.in
+Cache Out:                      /opt/pwscf_cache/3339fc03fa4009075c9fd3f12249da3387dd9bacab96a66b4392df4bfad8c050d81e2e6455434c56459c3735e35092de06181fb6b7fabc37c3b62722ede235d1.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/3/config_0001.in > wd/configs/3/config_0001.out
+
+
+File Name:                      config_0001
+Path:                           wd/configs/4
+File In:                        wd/configs/4/config_0001.in
+File Out:                       wd/configs/4/config_0001.out
+Hash:                           5fc2c918fba07ccaea351628d259400bf5d67347fc2cd7fb71dd6164488bf97e929003f37b2482bacdd12e91cb6bdb575aa6cb99a52cc16d8496fb96fb2eed0f
+Use Cache?:                     True
+Cache Used:                     True
+Cache In:                       /opt/pwscf_cache/5fc2c918fba07ccaea351628d259400bf5d67347fc2cd7fb71dd6164488bf97e929003f37b2482bacdd12e91cb6bdb575aa6cb99a52cc16d8496fb96fb2eed0f.in
+Cache Out:                      /opt/pwscf_cache/5fc2c918fba07ccaea351628d259400bf5d67347fc2cd7fb71dd6164488bf97e929003f37b2482bacdd12e91cb6bdb575aa6cb99a52cc16d8496fb96fb2eed0f.out
+CMD:                            mpirun -n 1 /opt/qe/bin/pw.x -i wd/configs/4/config_0001.in > wd/configs/4/config_0001.out
+
+
