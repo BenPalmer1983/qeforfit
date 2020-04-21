@@ -718,8 +718,9 @@ class pwscf_input:
   def set_config(self, s):
   
     if(s['labels'] == None):
-      s['labels'] = self.get_atom_labels()
-      
+      s['labels'] = self.get_atom_labels()      
+    s['alat_in'] = float(self.system['celldm'][0])
+    
     a = atom_config.make(s)     
     
     self.atomic_positions = []
@@ -728,12 +729,12 @@ class pwscf_input:
     for atom in a['atoms']:
       self.atomic_positions.append([str(atom[0]),str(float(atom[1])),str(float(atom[2])),str(float(atom[3]))])
     
-    self.system['celldm'][0] = str(float(s['size_x']) * float(self.system['celldm'][0]))
+    self.system['celldm'][0] = str(float(a['size_x']) * float(self.system['celldm'][0]) * a['alat_change'])
     
     # Make
     self.make()    
     
-    
+    return a
     
     
   def nomalise_cell_parameters(self):

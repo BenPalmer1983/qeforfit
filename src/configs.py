@@ -61,7 +61,6 @@ class configs:
       for v in conf['vac']:
         for i in range(v[1]):
           conf['vac_list'].append(v[0])
-      
       g.configs.append(conf)
       i = i + 1
             
@@ -111,9 +110,10 @@ class configs:
           vac = vac + 1
         elif(tetra < c['tetra']):
           t.append(f.get_random_atom_label())
+          tetra = tetra + 1
         elif(octa < c['octa']):
           o.append(f.get_random_atom_label())
-           
+          octa = octa + 1
         
         # CREATE CONFIG
         labels = f.get_atom_labels()
@@ -131,7 +131,7 @@ class configs:
         alat = round(units.convert(c['alat_units'], 'bohr', c['alat']),7)    
         f.set_alat(alat)
         f.set_cp_arr(c['cp']) 
-        f.set_config(s)
+        s_conf = f.set_config(s)
         
         f.rand_vary_alat(c['alat_var'][0], c['alat_var'][1])
         f.rand_vary_positions(c['coord_var'][0], c['coord_var'][1])
@@ -139,9 +139,12 @@ class configs:
         f.save("config_" + i_str +".in", g.dirs['configs']+'/'+str(n))    
         runfiles.append(g.dirs['configs']+'/'+str(n)+'/'+'config_' + i_str + '.in')
         
-        g.log_fh.write('alat: ' + str(f.get_alat()) + '\n')
+        g.log_fh.write('alat: ' + str(f.get_alat()) + '  [in: ' + str(s_conf['alat_in']) + ' out: ' + str(s_conf['alat_out']) + ']\n')
         g.log_fh.write('type: ' + str(c['type']) + '\n')
         g.log_fh.write('size: ' + str(c['size']) + '\n')
+        for l in s_conf['log']:
+          g.log_fh.write('   ' + str(l) + '\n')
+          
         
         g.log_fh.write('saved to: ' + g.dirs['configs']+'/'+str(n) + '/' + str("config_" + i_str +".in") + '\n')
         g.log_fh.write('\n')

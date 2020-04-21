@@ -1,5 +1,5 @@
 ###########################################################################
-Mon, 20 Apr 2020 21:42:54 +0000
+Tue, 21 Apr 2020 01:36:34 +0000
 ###########################################################################
 
 Script: /cloud/Code/python/qeforfit/qeforfit.py
@@ -13,7 +13,7 @@ cp: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
 rand_seed: 0
 coord_var: [-0.01, 0.01]
 alat_var: [-0.001, 0.001]
-count: 10
+count: 12
 tetra: 2
 octa: 2
 vac: [[1, 3], [3, 2]]
@@ -43,73 +43,100 @@ Save Config 1
 
 config 1 1 
 seed 885440 
-alat: 15.26770207
+alat: 15.10697748  [in: 7.6370544 out: 15.113316766216412]
 type: fcc
 size: 2
+   Vacancy: Al 0.5 0.75 0.75 
 saved to: wd/configs/1/config_0001.in
 
 config 1 2 
 seed 813996 
-alat: 15.2820595
+alat: 15.12118377  [in: 7.6370544 out: 15.113316766216412]
 type: fcc
 size: 2
+   Vacancy: Al 0.0 0.0 0.5 
 saved to: wd/configs/1/config_0002.in
 
 config 1 3 
 seed 443670 
-alat: 15.26341948
+alat: 15.10273997  [in: 7.6370544 out: 15.113316766216412]
 type: fcc
 size: 2
+   Vacancy: Al 0.5 0.25 0.75 
 saved to: wd/configs/1/config_0003.in
 
 config 1 4 
 seed 545260 
-alat: 15.28927469
+alat: 14.79572406  [in: 7.6370544 out: 14.781047740081867]
 type: fcc
 size: 2
+   Vacancy: Al 0.0 0.5 0.5 
+   Vacancy: Al 0.5 0.0 0.0 
+   Vacancy: Al 0.5 0.75 0.75 
 saved to: wd/configs/1/config_0004.in
 
 config 1 5 
 seed 131128 
-alat: 15.28796446
+alat: 14.79445612  [in: 7.6370544 out: 14.781047740081867]
 type: fcc
 size: 2
+   Vacancy: Al 0.5 0.5 0.0 
+   Vacancy: Al 0.75 0.5 0.25 
+   Vacancy: Al 0.5 0.5 0.5 
 saved to: wd/configs/1/config_0005.in
 
 config 1 6 
 seed 697622 
-alat: 15.28347198
+alat: 15.44104466  [in: 7.6370544 out: 15.431584940474396]
 type: fcc
 size: 2
+   Tetra: Al 0.25 0.25 0.25 
 saved to: wd/configs/1/config_0006.in
 
 config 1 7 
 seed 420237 
-alat: 15.27843606
+alat: 15.43595682  [in: 7.6370544 out: 15.431584940474396]
 type: fcc
 size: 2
+   Tetra: Al 0.25 0.25 0.25 
 saved to: wd/configs/1/config_0007.in
 
 config 1 8 
 seed 833235 
-alat: 15.26352225
+alat: 15.42083758  [in: 7.6370544 out: 15.431584940474396]
 type: fcc
 size: 2
+   Octa: Al 0.5 0.5 0.5 
 saved to: wd/configs/1/config_0008.in
 
 config 1 9 
-seed 763656 
-alat: 15.26117636
+seed 195588 
+alat: 15.42892963  [in: 7.6370544 out: 15.431584940474396]
 type: fcc
 size: 2
+   Octa: Al 1.0 0.5 0.0 
 saved to: wd/configs/1/config_0009.in
 
 config 1 10 
-seed 543925 
-alat: 15.26168877
+seed 536342 
+alat: 15.26661835  [in: 7.6370544 out: 15.2741088]
 type: fcc
 size: 2
 saved to: wd/configs/1/config_0010.in
+
+config 1 11 
+seed 799301 
+alat: 15.2787047  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0011.in
+
+config 1 12 
+seed 135819 
+alat: 15.28713085  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0012.in
 
 
 Save Config 2
@@ -117,35 +144,35 @@ Save Config 2
 
 config 2 1 
 seed 140891 
-alat: 15.27030064
+alat: 15.27030064  [in: 7.6370544 out: 15.2741088]
 type: fcc
 size: 2
 saved to: wd/configs/2/config_0001.in
 
 config 2 2 
 seed 988251 
-alat: 15.26164287
+alat: 15.26164287  [in: 7.6370544 out: 15.2741088]
 type: fcc
 size: 2
 saved to: wd/configs/2/config_0002.in
 
 config 2 3 
 seed 210040 
-alat: 15.28316014
+alat: 15.28316014  [in: 7.6370544 out: 15.2741088]
 type: fcc
 size: 2
 saved to: wd/configs/2/config_0003.in
 
 config 2 4 
 seed 716968 
-alat: 15.25915976
+alat: 15.25915976  [in: 7.6370544 out: 15.2741088]
 type: fcc
 size: 2
 saved to: wd/configs/2/config_0004.in
 
 config 2 5 
 seed 23120 
-alat: 15.26174747
+alat: 15.26174747  [in: 7.6370544 out: 15.2741088]
 type: fcc
 size: 2
 saved to: wd/configs/2/config_0005.in
@@ -156,35 +183,35 @@ Save Config 3
 
 config 3 1 
 seed 140891 
-alat: 12.13308541
+alat: 12.13308541  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
 saved to: wd/configs/3/config_0001.in
 
 config 3 2 
 seed 988251 
-alat: 12.12620634
+alat: 12.12620634  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
 saved to: wd/configs/3/config_0002.in
 
 config 3 3 
 seed 210040 
-alat: 12.14330298
+alat: 12.14330298  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
 saved to: wd/configs/3/config_0003.in
 
 config 3 4 
 seed 716968 
-alat: 12.12423337
+alat: 12.12423337  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
 saved to: wd/configs/3/config_0004.in
 
 config 3 5 
 seed 23120 
-alat: 12.12628945
+alat: 12.12628945  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
 saved to: wd/configs/3/config_0005.in
@@ -192,5 +219,5 @@ saved to: wd/configs/3/config_0005.in
 
 
 ###########################################################################
-Duration: 2.4835875034332275
+Duration: 2.6030826568603516
 ###########################################################################

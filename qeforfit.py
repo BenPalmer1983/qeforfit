@@ -645,7 +645,6 @@ class configs:
       for v in conf['vac']:
         for i in range(v[1]):
           conf['vac_list'].append(v[0])
-      
       g.configs.append(conf)
       i = i + 1
             
@@ -694,9 +693,11 @@ class configs:
           vac = vac + 1
         elif(tetra < c['tetra']):
           t.append(f.get_random_atom_label())
+          tetra = tetra + 1
         elif(octa < c['octa']):
           o.append(f.get_random_atom_label())
-           
+          octa = octa + 1
+        
 # CREATE CONFIG
         labels = f.get_atom_labels()
         s = {
@@ -713,7 +714,7 @@ class configs:
         alat = round(units.convert(c['alat_units'], 'bohr', c['alat']),7)    
         f.set_alat(alat)
         f.set_cp_arr(c['cp']) 
-        f.set_config(s)
+        s_conf = f.set_config(s)
         
         f.rand_vary_alat(c['alat_var'][0], c['alat_var'][1])
         f.rand_vary_positions(c['coord_var'][0], c['coord_var'][1])
@@ -721,10 +722,12 @@ class configs:
         f.save("config_" + i_str +".in", g.dirs['configs']+'/'+str(n))    
         runfiles.append(g.dirs['configs']+'/'+str(n)+'/'+'config_' + i_str + '.in')
         
-        g.log_fh.write('alat: ' + str(f.get_alat()) + '\n')
+        g.log_fh.write('alat: ' + str(f.get_alat()) + '  [in: ' + str(s_conf['alat_in']) + ' out: ' + str(s_conf['alat_out']) + ']\n')
         g.log_fh.write('type: ' + str(c['type']) + '\n')
         g.log_fh.write('size: ' + str(c['size']) + '\n')
-        
+        for l in s_conf['log']:
+          g.log_fh.write('   ' + str(l) + '\n')
+          
         g.log_fh.write('saved to: ' + g.dirs['configs']+'/'+str(n) + '/' + str("config_" + i_str +".in") + '\n')
         g.log_fh.write('\n')
         
@@ -1496,8 +1499,9 @@ class pwscf_input:
   def set_config(self, s):
   
     if(s['labels'] == None):
-      s['labels'] = self.get_atom_labels()
-      
+      s['labels'] = self.get_atom_labels()      
+    s['alat_in'] = float(self.system['celldm'][0])
+    
     a = atom_config.make(s)     
     
     self.atomic_positions = []
@@ -1506,10 +1510,12 @@ class pwscf_input:
     for atom in a['atoms']:
       self.atomic_positions.append([str(atom[0]),str(float(atom[1])),str(float(atom[2])),str(float(atom[3]))])
     
-    self.system['celldm'][0] = str(float(s['size_x']) * float(self.system['celldm'][0]))
+    self.system['celldm'][0] = str(float(a['size_x']) * float(self.system['celldm'][0]) * a['alat_change'])
     
 # Make
     self.make()    
+    
+    return a
     
   def nomalise_cell_parameters(self):
     self.system['celldm'][0] = str(float(self.system['celldm'][0]) * float(self.cell_parameters[1][0]))
@@ -3762,6 +3768,8 @@ class atom_config:
   
 # Default Settings
     s = {
+        'alat_in': None,
+        'alat_out': None,
         'type': 'sc',
         'labels': ['Atom'],
         'size_x': 1,
@@ -3775,6 +3783,7 @@ class atom_config:
         'cell_count': 0,
         'atom_count_no_defects': 0,
         'atom_count': 0,
+        'log': [],
         }
                
 # Load Settings
@@ -3814,11 +3823,14 @@ class atom_config:
             zc = (z + b[n][2]) / s['size_z']            
             if(vac[a] == None):
               atoms.append([label, xc, yc, zc])
+            else:
+              s['log'].append('Vacancy: ' + str(label) + ' ' + str(xc) + ' ' + str(yc) + ' ' + str(zc) + ' ' )
             a = a + 1
             l = l + 1
           if(tetra_l[c] != None):
             t = atom_config.fcc_tetra()
             atoms.append([tetra_l[c], t[0][0], t[0][1], t[0][2]])
+            s['log'].append('Tetra: ' + str(tetra_l[c]) + ' ' + str(t[0][0]) + ' ' + str(t[0][1]) + ' ' + str(t[0][2]) + ' ' )
           if(octa_l[c] != None):
             rn = random.randint(0,1)
             if(rn == 0):
@@ -3826,9 +3838,16 @@ class atom_config:
             else:
               o = atom_config.fcc_octa_2()              
             atoms.append([octa_l[c], o[0][0], o[0][1], o[0][2]])
+            s['log'].append('Octa: ' + str(octa_l[c]) + ' ' + str(o[0][0]) + ' ' + str(o[0][1]) + ' ' + str(o[0][2]) + ' ' )
           c = c + 1
             
     alat_change = (len(atoms)/a_count)**(1/3)  
+    
+    if(s['alat_in'] != None):
+      try:
+        s['alat_out'] = s['alat_in'] * s['size_x'] * alat_change
+      except:
+        pass
     
 # Store output
     s['atoms'] = atoms

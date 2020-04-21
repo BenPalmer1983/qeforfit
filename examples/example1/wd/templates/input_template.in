@@ -1,4 +1,4 @@
-! Edited 22:42   20/4/2020
+! Edited 2:36   21/4/2020
 &CONTROL 
 calculation = "scf", 
 disk_io = 'low', 

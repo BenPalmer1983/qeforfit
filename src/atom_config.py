@@ -5,6 +5,8 @@ class atom_config:
   
     # Default Settings
     s = {
+        'alat_in': None,
+        'alat_out': None,
         'type': 'sc',
         'labels': ['Atom'],
         'size_x': 1,
@@ -18,6 +20,7 @@ class atom_config:
         'cell_count': 0,
         'atom_count_no_defects': 0,
         'atom_count': 0,
+        'log': [],
         }
                
     # Load Settings
@@ -58,11 +61,14 @@ class atom_config:
             zc = (z + b[n][2]) / s['size_z']            
             if(vac[a] == None):
               atoms.append([label, xc, yc, zc])
+            else:
+              s['log'].append('Vacancy: ' + str(label) + ' ' + str(xc) + ' ' + str(yc) + ' ' + str(zc) + ' ' )
             a = a + 1
             l = l + 1
           if(tetra_l[c] != None):
             t = atom_config.fcc_tetra()
             atoms.append([tetra_l[c], t[0][0], t[0][1], t[0][2]])
+            s['log'].append('Tetra: ' + str(tetra_l[c]) + ' ' + str(t[0][0]) + ' ' + str(t[0][1]) + ' ' + str(t[0][2]) + ' ' )
           if(octa_l[c] != None):
             rn = random.randint(0,1)
             if(rn == 0):
@@ -70,9 +76,16 @@ class atom_config:
             else:
               o = atom_config.fcc_octa_2()              
             atoms.append([octa_l[c], o[0][0], o[0][1], o[0][2]])
+            s['log'].append('Octa: ' + str(octa_l[c]) + ' ' + str(o[0][0]) + ' ' + str(o[0][1]) + ' ' + str(o[0][2]) + ' ' )
           c = c + 1
             
     alat_change = (len(atoms)/a_count)**(1/3)  
+    
+    if(s['alat_in'] != None):
+      try:
+        s['alat_out'] = s['alat_in'] * s['size_x'] * alat_change
+      except:
+        pass
     
     # Store output
     s['atoms'] = atoms
