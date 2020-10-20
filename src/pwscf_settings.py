@@ -17,15 +17,23 @@ class pwscf_settings:
     "pwscf_pp": '',
     "pwscf_cache": '',
     "pwscf_bin": '',
+    "pwscf_script": '',
     }
 
-
+    """
     s['omp_num_threads'] = os.environ['OMP_NUM_THREADS']
     s['proc_count'] = os.environ['PROC_COUNT']
     s['pwscf_scratch'] = os.environ['PWSCF_SCRATCH']
     s['pwscf_pp'] = os.environ['PWSCF_PP']
     s['pwscf_cache'] = os.environ['PWSCF_CACHE']
     s['pwscf_bin'] = os.environ['PWSCF_BIN']
+    """
+    
+    for k in s.keys():
+      try:
+        s[k.lower()] = os.environ[k.upper()]
+      except:
+        pass
 
 
     return s

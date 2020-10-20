@@ -1,11 +1,11 @@
-! Edited 2:36   21/4/2020
+! Edited 23:41   20/7/2020
 &CONTROL 
 calculation = "scf", 
 disk_io = 'low', 
 etot_conv_thr = 1.0E-4, 
 forc_conv_thr = 1.0D-3, 
 nstep = 40, 
-outdir = "/opt/scratch", 
+outdir = "/scratch", 
 prefix = "GkoVVDqtnvxpzyGD", 
 pseudo_dir = "/opt/pp", 
 restart_mode = 'from_scratch', 
@@ -14,7 +14,7 @@ tstress = .true.,
 / 
 &SYSTEM 
 celldm(1) = 14.79445612, 
-degauss = 0.02, 
+degauss = 0.021, 
 ecutrho = 200, 
 ecutwfc = 50, 
 ibrav = 0, 

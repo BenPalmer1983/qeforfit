@@ -24,9 +24,13 @@ class configs:
   @staticmethod
   def load_from_inp():     
     #print("loading")
-    
     # Loop through configs
     i = 0
+    
+    if(type(g.inp['config']) != list):
+      c = g.inp['config']
+      g.inp['config'] = [c]
+    
     for c in g.inp['config']:
       for k in c.keys():
         g.log_fh.write(str(k) + ': ' + str(c[k]) + '\n')
@@ -81,75 +85,102 @@ class configs:
       g.log_fh.write('Save Config ' + str(n) + '\n')            
       g.log_fh.write('======================\n')
       g.log_fh.write('\n')
-                  
-      for i in range(c['count']):
-        seed = random.randint(0,1000000)
-        g.log_fh.write('config ' + str(n) + ' ' + str(i+1) + ' \n')
-        g.log_fh.write('seed ' + str(seed) + ' \n')
       
-        i_str = str(i+1)
-        while(len(i_str)<4):
-          i_str = '0'+i_str
-          
-        f = pwscf_input()
-        f.load(template)
-        f.set_dirs()
-        f.set_seed(seed)
-        f.set_prefix()    
-        # SETTINGS
-        f.set_ecutwfc(g.ffd['ecutwfc'])
-        f.set_ecutrho(g.ffd['ecutrho'])
-        f.set_k_points(g.ffd['kpointstype'], g.ffd['kpoints'])
-        f.set_degauss(g.ffd['degauss'])
-        
-        v = 0
-        t = []
-        o = []
-        if(vac < len(c['vac_list'])):
-          v = c['vac_list'][vac]
-          vac = vac + 1
-        elif(tetra < c['tetra']):
-          t.append(f.get_random_atom_label())
-          tetra = tetra + 1
-        elif(octa < c['octa']):
-          o.append(f.get_random_atom_label())
-          octa = octa + 1
-        
-        # CREATE CONFIG
-        labels = f.get_atom_labels()
-        s = {
-            'type': c['type'],
-            'labels': None,
-            'size_x': c['size'],
-            'size_y': c['size'],
-            'size_z': c['size'],
-            'vac': v,
-            'tetra': t,
-            'octa': o,
-            }    
+      if(c['type'] == 'file'):
+        for i in range(c['count']):
+          seed = random.randint(0,1000000)
+          g.log_fh.write('config ' + str(n) + ' ' + str(i+1) + ' \n')
+          g.log_fh.write('seed ' + str(seed) + ' \n')
+      
+          i_str = str(i+1)
+          while(len(i_str)<4):
+            i_str = '0'+i_str
             
-        alat = round(units.convert(c['alat_units'], 'bohr', c['alat']),7)    
-        f.set_alat(alat)
-        f.set_cp_arr(c['cp']) 
-        s_conf = f.set_config(s)
+          f = pwscf_input()
+          f.load(template)
+          f.set_dirs()
+          f.set_seed(seed)
+          f.set_prefix()       
         
-        f.rand_vary_alat(c['alat_var'][0], c['alat_var'][1])
-        f.rand_vary_positions(c['coord_var'][0], c['coord_var'][1])
+          f.rand_vary_alat(c['alat_var'][0], c['alat_var'][1])
+          f.rand_vary_positions(c['coord_var'][0], c['coord_var'][1])
         
-        f.save("config_" + i_str +".in", g.dirs['configs']+'/'+str(n))    
-        runfiles.append(g.dirs['configs']+'/'+str(n)+'/'+'config_' + i_str + '.in')
+          f.save("config_" + i_str +".in", g.dirs['configs']+'/'+str(n))    
+          runfiles.append(g.dirs['configs']+'/'+str(n)+'/'+'config_' + i_str + '.in')   
+  
+          
+      else:
+        for i in range(c['count']):
+          seed = random.randint(0,1000000)
+          g.log_fh.write('config ' + str(n) + ' ' + str(i+1) + ' \n')
+          g.log_fh.write('seed ' + str(seed) + ' \n')
+      
+          i_str = str(i+1)
+          while(len(i_str)<4):
+            i_str = '0'+i_str
+          
+          f = pwscf_input()
+          f.load(template)
+          f.set_dirs()
+          f.set_seed(seed)
+          f.set_prefix()    
+          # SETTINGS
+          f.set_ecutwfc(g.ffd['ecutwfc'])
+          f.set_ecutrho(g.ffd['ecutrho'])
+          f.set_k_points(g.ffd['kpointstype'], g.ffd['kpoints'])
+          f.set_degauss(g.ffd['degauss'])
         
-        g.log_fh.write('alat: ' + str(f.get_alat()) + '  [in: ' + str(s_conf['alat_in']) + ' out: ' + str(s_conf['alat_out']) + ']\n')
-        g.log_fh.write('type: ' + str(c['type']) + '\n')
-        g.log_fh.write('size: ' + str(c['size']) + '\n')
-        for l in s_conf['log']:
-          g.log_fh.write('   ' + str(l) + '\n')
+          v = 0
+          t = []
+          o = []
+          if(vac < len(c['vac_list'])):
+            v = c['vac_list'][vac]
+            vac = vac + 1
+          elif(tetra < c['tetra']):
+            t.append(f.get_random_atom_label())
+            tetra = tetra + 1
+          elif(octa < c['octa']):
+            o.append(f.get_random_atom_label())
+            octa = octa + 1
+        
+          # CREATE CONFIG
+          labels = f.get_atom_labels()
+          s = {
+              'type': c['type'],
+              'labels': None,
+              'size_x': c['size'],
+              'size_y': c['size'],
+              'size_z': c['size'],
+              'vac': v,
+              'tetra': t,
+              'octa': o,
+              }    
+            
+          alat = round(units.convert(c['alat_units'], 'bohr', c['alat']),7)    
+          f.set_alat(alat)
+          f.set_cp_arr(c['cp']) 
+          s_conf = f.set_config(s)
+        
+          f.rand_vary_alat(c['alat_var'][0], c['alat_var'][1])
+          f.rand_vary_positions(c['coord_var'][0], c['coord_var'][1])
+        
+          f.save("config_" + i_str +".in", g.dirs['configs']+'/'+str(n))    
+          runfiles.append(g.dirs['configs']+'/'+str(n)+'/'+'config_' + i_str + '.in')
+        
+          g.log_fh.write('alat: ' + str(f.get_alat()) + '  [in: ' + str(s_conf['alat_in']) + ' out: ' + str(s_conf['alat_out']) + ']\n')
+          g.log_fh.write('type: ' + str(c['type']) + '\n')
+          g.log_fh.write('size: ' + str(c['size']) + '\n')
+          for l in s_conf['log']:
+            g.log_fh.write('   ' + str(l) + '\n')
           
         
-        g.log_fh.write('saved to: ' + g.dirs['configs']+'/'+str(n) + '/' + str("config_" + i_str +".in") + '\n')
+          g.log_fh.write('saved to: ' + g.dirs['configs']+'/'+str(n) + '/' + str("config_" + i_str +".in") + '\n')
+          g.log_fh.write('\n')
+        
         g.log_fh.write('\n')
         
-      g.log_fh.write('\n')
+        
+        
     # Return file list
     return runfiles
   

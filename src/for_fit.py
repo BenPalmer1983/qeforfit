@@ -4,7 +4,7 @@
 ######################################################
 
 from configs import configs
-from pwscf_input import pwscf_input
+from pwscf_inout import pwscf_inout
 from atom_config import atom_config
 from pwscf_exec import pwscf_exec
 

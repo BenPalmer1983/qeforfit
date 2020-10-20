@@ -1,0 +1,10 @@
+template file=fepd.in
+run option=False
+
+settings ecutwfc=50 ecutrho=200 kpoints='3 3 3 1 1 1' kpointstype='automatic' degauss=0.021 
+
+config type=file rand_seed=1 coord_var=-0.01,0.01 alat_var=-0.001,0.001 count=5 
+#config type=bcc size=2 alat=3.21 alat_units=ang cp=1.0,1.0,1.0,0.0,0.0,0.0 rand_seed=1 coord_var=-0.01,0.01 alat_var=-0.001,0.001 count=5 
+
+
+

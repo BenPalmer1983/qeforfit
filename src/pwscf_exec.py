@@ -117,7 +117,15 @@ class pwscf_exec:
         if (not os.path.exists(cache_file_out)):
           use_cache = False
       
-      cmd = 'mpirun -n ' + s['proc_count'] + ' ' + s['pwscf_bin'] + ' -i ' + file_path + ' > ' + path + '/' + file_name + '.out'
+      #cmd = 'mpirun -n ' + s['proc_count'] + ' ' + s['pwscf_bin'] + ' -i ' + file_path + ' > ' + path + '/' + file_name + '.out'
+      #if(s['pwscf_script'] == ''):
+      #  cmd = 'mpirun -n ' + s['proc_count'] + ' ' + s['pwscf_bin'] + ' -i ' + file_path + ' > ' + path + '/' + file_name + '.out'
+      #else:
+      #  cmd = s['pwscf_script'] + ' ' + s['proc_count'] + ' ' + file_path + ' ' + path + '/' + file_name + '.out'
+      cmd = s['pwscf_script'] + ' ' + s['proc_count'] + ' ' + file_path + ' ' + path + '/' + file_name + '.out'
+      
+      
+      
       
       run_list.append({
         'file_name': file_name, 

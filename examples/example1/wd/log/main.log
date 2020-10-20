@@ -1,5 +1,5 @@
 ###########################################################################
-Tue, 21 Apr 2020 01:36:34 +0000
+Mon, 20 Jul 2020 22:41:13 +0000
 ###########################################################################
 
 Script: /cloud/Code/python/qeforfit/qeforfit.py
@@ -13,7 +13,7 @@ cp: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
 rand_seed: 0
 coord_var: [-0.01, 0.01]
 alat_var: [-0.001, 0.001]
-count: 12
+count: 20
 tetra: 2
 octa: 2
 vac: [[1, 3], [3, 2]]
@@ -23,6 +23,12 @@ size: 2
 alat: 4.04
 alat_units: ang
 cp: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+rand_seed: 1
+coord_var: [-0.01, 0.01]
+alat_var: [-0.001, 0.001]
+count: 5
+
+type: file
 rand_seed: 1
 coord_var: [-0.01, 0.01]
 alat_var: [-0.001, 0.001]
@@ -138,6 +144,62 @@ type: fcc
 size: 2
 saved to: wd/configs/1/config_0012.in
 
+config 1 13 
+seed 66040 
+alat: 15.27296386  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0013.in
+
+config 1 14 
+seed 521124 
+alat: 15.27170404  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0014.in
+
+config 1 15 
+seed 740956 
+alat: 15.27785843  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0015.in
+
+config 1 16 
+seed 886774 
+alat: 15.28731795  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0016.in
+
+config 1 17 
+seed 800143 
+alat: 15.26752604  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0017.in
+
+config 1 18 
+seed 860669 
+alat: 15.26051553  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0018.in
+
+config 1 19 
+seed 891821 
+alat: 15.26960452  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0019.in
+
+config 1 20 
+seed 981191 
+alat: 15.26985441  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0020.in
+
 
 Save Config 2
 ======================
@@ -183,41 +245,54 @@ Save Config 3
 
 config 3 1 
 seed 140891 
+config 3 2 
+seed 988251 
+config 3 3 
+seed 210040 
+config 3 4 
+seed 716968 
+config 3 5 
+seed 23120 
+Save Config 4
+======================
+
+config 4 1 
+seed 140891 
 alat: 12.13308541  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
-saved to: wd/configs/3/config_0001.in
+saved to: wd/configs/4/config_0001.in
 
-config 3 2 
+config 4 2 
 seed 988251 
 alat: 12.12620634  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
-saved to: wd/configs/3/config_0002.in
+saved to: wd/configs/4/config_0002.in
 
-config 3 3 
+config 4 3 
 seed 210040 
 alat: 12.14330298  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
-saved to: wd/configs/3/config_0003.in
+saved to: wd/configs/4/config_0003.in
 
-config 3 4 
+config 4 4 
 seed 716968 
 alat: 12.12423337  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
-saved to: wd/configs/3/config_0004.in
+saved to: wd/configs/4/config_0004.in
 
-config 3 5 
+config 4 5 
 seed 23120 
 alat: 12.12628945  [in: 6.0680556 out: 12.1361112]
 type: bcc
 size: 2
-saved to: wd/configs/3/config_0005.in
+saved to: wd/configs/4/config_0005.in
 
 
 
 ###########################################################################
-Duration: 2.6030826568603516
+Duration: 4.830958843231201
 ###########################################################################
