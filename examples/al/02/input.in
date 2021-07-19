@@ -1,0 +1,11 @@
+template file=alfcc.in
+run option=False
+
+settings ecutwfc=50 ecutrho=200 kpoints='3 3 3 1 1 1' kpointstype='automatic' degauss=0.02 
+config type=fcc size=2 alat=4.04 alat_units=ang cp=1.0,1.0,1.0,0.0,0.0,0.0 rand_seed=1 coord_var=-0.00,0.00 alat_var=-0.000,0.000 count=1
+config type=fcc size=2 alat=4.04 alat_units=ang cp=1.0,1.0,1.0,0.0,0.0,0.0 rand_seed=1 coord_var=-0.1,0.1 alat_var=-0.000,0.000 count=1
+config type=fcc size=2 alat=4.04 alat_units=ang cp=1.0,1.0,1.0,0.0,0.0,0.0 rand_seed=1 coord_var=-4.04,4.04 alat_var=-0.000,0.000 count=10
+
+
+
+

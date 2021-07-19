@@ -1,0 +1,137 @@
+###########################################################################
+Mon, 19 Jul 2021 18:27:03 +0000
+###########################################################################
+
+Script: /cloud/Code/python/qeforfit/qeforfit.py
+Loaded: input.in
+
+type: fcc
+size: 2
+alat: 4.04
+alat_units: ang
+cp: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+rand_seed: 1
+coord_var: [-0.0, 0.0]
+alat_var: [-0.0, 0.0]
+count: 1
+
+type: fcc
+size: 2
+alat: 4.04
+alat_units: ang
+cp: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+rand_seed: 1
+coord_var: [-0.1, 0.1]
+alat_var: [-0.0, 0.0]
+count: 1
+
+type: fcc
+size: 2
+alat: 4.04
+alat_units: ang
+cp: [1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+rand_seed: 1
+coord_var: [-4.04, 4.04]
+alat_var: [-0.0, 0.0]
+count: 10
+
+Save Config 1
+======================
+
+config 1 1 
+seed 140891 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/1/config_0001.in
+
+
+Save Config 2
+======================
+
+config 2 1 
+seed 140891 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/2/config_0001.in
+
+
+Save Config 3
+======================
+
+config 3 1 
+seed 140891 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0001.in
+
+config 3 2 
+seed 393571 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0002.in
+
+config 3 3 
+seed 939771 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0003.in
+
+config 3 4 
+seed 454938 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0004.in
+
+config 3 5 
+seed 904256 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0005.in
+
+config 3 6 
+seed 486302 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0006.in
+
+config 3 7 
+seed 719949 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0007.in
+
+config 3 8 
+seed 543673 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0008.in
+
+config 3 9 
+seed 767994 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0009.in
+
+config 3 10 
+seed 856616 
+alat: 15.2741088  [in: 7.6370544 out: 15.2741088]
+type: fcc
+size: 2
+saved to: wd/configs/3/config_0010.in
+
+
+
+###########################################################################
+Duration: 0.39180731773376465
+###########################################################################

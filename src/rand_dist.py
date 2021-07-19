@@ -6,6 +6,8 @@ import sys
 import time
 import hashlib
 import math
+import numpy
+import matplotlib.pyplot as plt
 
 class rand_dist:
 
@@ -78,6 +80,7 @@ class rand_dist:
     # Get a random float between 0 and 1
     self.xn = (self.a * self.xn + self.c) % self.m
     randFloat = self.xn / self.m
+    randFloat = numpy.random.uniform(0.0, 1.0)
     return randFloat
 
   def rng(self):
@@ -244,12 +247,12 @@ class rand_dist:
     fx = fxA + fxB
     return fx
 
-  def makeTally(self, tallySize=50, sampleSize=100000):
+  def makeTally(self, tallySize=200, sampleSize=100000):
     # Declare list
     self.tally = []
     self.tallyX = []
     self.tallySize = tallySize
-    sampleSize = 100000
+    sampleSize = 1000000
     self.sampleSize = sampleSize
     halfIncrement = (self.upper - self.lower) / (2 * tallySize)
     # Loop through
@@ -279,6 +282,16 @@ class rand_dist:
     print("==============================")
     print()
 
+    plt.figure(figsize=(12,8))
+    plt.plot(self.tallyX[:], self.tally[:], '+')
+    plt.xlabel('Random Number')
+    plt.ylabel('Count per bin (0.01 width)')
+    plt.title('G-Heat 1,000,000 random numbers')
+    plt.grid(True)
+    plt.savefig('gheat-distribution', format='eps')
+    plt.show()
+    plt.close('all') 
+    
 
   @staticmethod
   def interp(x, points):
@@ -332,7 +345,7 @@ class RandDistTable:
     print("")
     print("")
     print("======================")
-
+    
 
 
 

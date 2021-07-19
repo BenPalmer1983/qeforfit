@@ -1,4 +1,6 @@
 from units import units
+import numpy
+import matplotlib.pyplot as plt
 
 class configs:
   
@@ -76,6 +78,7 @@ class configs:
     n = 0
     for c in g.configs:
       random.seed(c['rand_seed'])
+      numpy.random.seed(c['rand_seed']) 
     
       n = n + 1
       vac = 0
